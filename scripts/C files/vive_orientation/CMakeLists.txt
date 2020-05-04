@@ -1,0 +1,8 @@
+project (viveOri C)
+include_directories(${CMAKE_BINARY_DIR}/include)
+link_directories(${CMAKE_BINARY_DIR})
+add_executable(viveOri viveOri.c)
+target_link_libraries(viveOri PRIVATE openhmd)
+if (UNIX)
+    target_link_libraries(viveOri PRIVATE m)
+endif()

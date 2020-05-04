@@ -1,0 +1,7 @@
+<launch>
+<node pkg="beginner_tutorials" type="lidar.py" name="lidar" output="log"/>
+<node pkg="beginner_tutorials" type="headset.py" name="headset" output="log"/>
+<node pkg="beginner_tutorials" type="headsetBot.py" name="headsetBot" output="log"/>
+<node pkg="beginner_tutorials" type="identLive.py" name="identLive" output="log"/>
+<node pkg="image_view" type="image_view" name="imageViewer" args="image:=/procimage"/>
+</launch>
