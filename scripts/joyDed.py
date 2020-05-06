@@ -46,20 +46,21 @@ if __name__=="__main__":
 		events = get_gamepad() # Get gamepad state
 		if events != 0:
 			for event in events:
-				if(event.code == 'ABS_X'):
+			# Iterate through events object to find input states
+				if(event.code == 'ABS_X'): # Left joystick x val
 					xVal = event.state
 					print(event.code, event.state)
-				if(event.code == 'ABS_Y'):
+				if(event.code == 'ABS_Y'): # Left joystick y val
 					yVal = event.state
 					print(event.code, event.state)
-				if(event.code == 'ABS_RY'):
+				if(event.code == 'ABS_RY'): # Right joystick y val
 					vel = event.state
-				if(event.code == 'BTN_EAST'):
+				if(event.code == 'BTN_EAST'): # -1 Impulse on b button
 					if impulse == -1:
 						impulse = 2
 					else:
 						impulse = -1
-				if(event.code == 'BTN_WEST'):
+				if(event.code == 'BTN_WEST'): # 0 Impulse on y button
 					if impulse == 0:
 						impulse = 2
 					else:
